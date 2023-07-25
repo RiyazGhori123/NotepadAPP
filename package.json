@@ -22,10 +22,12 @@
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-
 "proxy": {
   "/auth/google": {
      "target": "http://localhost:5000"
