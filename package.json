@@ -1,11 +1,14 @@
 {
+  "homepage": "http://riyazghori123.github.io/NotepadApp",
   "name": "notepadapp",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "predeploy": "nodemon run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -26,11 +29,12 @@
     "node": ">=14.20.1"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "nodemon": "^3.0.1"
   },
-"proxy": {
-  "/auth/google": {
-     "target": "http://localhost:5000"
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:5000"
+    }
   }
-}
 }
